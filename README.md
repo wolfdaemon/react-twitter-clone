@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+# react-twitter-clone
+A functional microblogging social web application concept using the React framework.
+
+##  Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
