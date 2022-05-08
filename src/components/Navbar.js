@@ -5,11 +5,12 @@ class Navbar extends Component {
 
 
   render() {
+    //Add | for format
     return (
       <div className="nav">
-        <Link to="/">Home</Link>
-        <Link to="/feed">About</Link>
-        <Link to="/meta">Menu</Link>
+        <Link to="/">Home</Link> | 
+        <Link to="/feed"> About</Link> | 
+        <Link to="/meta"> Menu</Link>
       </div>
     );
   }
