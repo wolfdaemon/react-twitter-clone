@@ -9,7 +9,7 @@ class Navbar extends Component {
     return (
       <div className="nav">
         <Link to="/">Home</Link> | 
-        <Link to="/feed"> About</Link> | 
+        <Link to="/feed"> Feed</Link> | 
         <Link to="/meta"> Menu</Link>
       </div>
     );

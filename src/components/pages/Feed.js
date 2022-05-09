@@ -5,6 +5,7 @@ class Feed extends React.Component {
     return(
       <div>
         <h2>What's New, Nephew? B)</h2>
+        {/* insert note/post here */}
       </div>
     );
   }
