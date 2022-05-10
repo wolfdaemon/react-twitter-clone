@@ -6,7 +6,7 @@ class Login extends React.Component {
     return(
       <div className="">
         <h2>Login:</h2>
-        <User />
+        <User/>
       </div>
     );
   }

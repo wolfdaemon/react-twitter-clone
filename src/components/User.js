@@ -28,14 +28,17 @@ class User extends Component {
             editMode: false,
             LoggingStatus: true
         });
+        localStorage.setItem('userId', this.IdContent.current.value);
     }
 
     handleLogout() {
         this.setState({
             id: "Unknown User",
             editMode: false,
-            LoggingStatus: false
+            LoggingStatus: false,
+            
         });
+        localStorage.removeItem('userId');
     }
 
     //Render login area for User to enter their id.
