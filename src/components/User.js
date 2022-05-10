@@ -29,6 +29,8 @@ class User extends Component {
             LoggingStatus: true
         });
         localStorage.setItem('userId', this.IdContent.current.value);
+        // calls the "refreshPage" method with will refresh the page and display the inputted information on parent components
+        this.refreshPage();
     }
 
     handleLogout() {
@@ -39,6 +41,10 @@ class User extends Component {
             
         });
         localStorage.removeItem('userId');
+    }
+    // refreshes the page
+    refreshPage() {
+        window.location.reload(false);
     }
 
     //Render login area for User to enter their id.
