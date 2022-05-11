@@ -1,0 +1,27 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    font-family: "Product Sans", "Liberation Sans", Arial, sans-serif;
+    background-color: #3D2F27;
+}
+
+h1 {
+    color: #FF9900;
+}
+
+
+h2 {
+    color: #FFF;
+}
+
+button {
+    background-color:#422E26;
+    border-color: #B38900;
+    color: #FFC400;
+}
+
+textarea {
+    background-color: #FFF;
+    color: #999999;
+}

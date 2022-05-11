@@ -19,7 +19,6 @@ class MyRoutes extends Component {
             <Router>
                 <div>
                     <Navbar />
-                    <hr />
                     <Routes>
                         <Route path="/" element={<Login />} />
                         <Route path="/feed" element={<Feed />} />

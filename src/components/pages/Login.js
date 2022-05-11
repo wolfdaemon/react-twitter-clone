@@ -1,11 +1,12 @@
 import React from "react";
-import User from "../User"
+import User from "../User";
+import "../../css/Login.css";
 
 class Login extends React.Component {
   render(){
     return(
       <div className="">
-        <h2>Login:</h2>
+        <h2 className="login">Login:</h2>
         <User/>
       </div>
     );
