@@ -1,18 +1,108 @@
+/* This is attempt at OOCSS (Object-Oriented CSS), and BEM naming conventions
+Citations:
+- https://www.keycdn.com/blog/oocss
+
+The basic primary concept is to organize CSS classes and make them into reuseable "modules" (objects)
+with "states" (conditions) to apply to elements.
+This results in, you guessed it, modularity and DRYer code.
+
+/* FIRST PRINCIPLE principle of OOCSS: Separate Structure and Skin (covered below). */
+
+/* SECOND PRINCIPLE: Separate Container and Content. */
+/* This means that every class should NOT style elements (such as an <h3>) to be dependent on a containing element
+(such as a header or footer). These should be separate and reusable ANYWHERE in the document regardless of
+structural context.
+For contextual clarity, "content" refers to elements like images, paragraphs, and divs, which are then nestled
+into other "container" elements.
+i.e. "Containers can be represented by a structure class". 
+
+SPECIAL NOTE: If an element fits as a "structure" */
+
+
+/* --------------------------------------------- ACTUAL CODE ----------------------------------------- */
+
+
+
+
+
+/* FOR MOBILE DEVICES: */
+
+/* -------------------- FIRST PRINCIPLE: Separate Structure and Skin ----------- */
+
+/* STRUCTURES - define repeating "invisible" patterns (like width, margins, etc) as reusable STRUCTURES
+(I.e. how things are laid out)
+Hint: An example of an entire "structure" would be a "btn-small" class, or small button, and all the invisible patterns
+would be the contents of that class. I.e., everything that would make a "button" look like a button and that
+alone would belong here, like: height, width, margins, overflow, padding, etc..
+Class examples: "btn-small", "btn-right" */
+
+.nav {
+    display: flex;
+}
+
+.nav-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-userid {
+    display: flex;
+    justify-content: left;
+}
+
+/*--------------------------------------------*/
+/* SKINS - define repeating visual patterns as reusable SKINS
+(I.e. what the layout looks like)
+Hint: An example of a skin class will be looked in the "btn" example I provided above. The structure of the
+button is already accomplished (i.e., we *made* a button); now we just have to apply a skin to the button.
+Keep in mind that this includes ANYTHING visual, like: colors, gradients, visible borders, shadows, etc.
+Class examples: "btn-green", "heading-green" */
+
+
+/*--------------------------------------------*/
+/* COLOR PALLETE:
+- White: #FFF
+- Brown: #583930
+- Grey: #252525
+- Orange: #FF9900
+- Yellow: #FFC400
+*/
+
+/*ANIMATION*/
+
+/*BACKGROUND*/
+
+/*COLOR*/
+
+/*DECORATION*/
+
+/*FONTS*/
+
+.font-orange {
+    color: #FF9900;
+}
+
+.font-white {
+    color: #FFF;
+}
+
+.font-yellow {
+    color: #FFC400;
+}
+
+/*IMAGES*/
+
+/*SHADOW*/
+
+/*--------------------------------------------*/
+/*ELEMENT SELECTORS: (Exceptions to the rule)*/
+/* Background with a red/purple gradient */
 body {
     margin: 0px;
     padding: 0px;
     overflow: hidden;
-    font-family: "Product Sans", "Liberation Sans", Arial, sans-serif;
-    background-color: #3D2F27;
-}
-
-h1 {
-    color: #FF9900;
-}
-
-
-h2 {
-    color: #FFF;
+    font-family: "Ubuntu", "Product Sans", "Liberation Sans", Arial, sans-serif;
+    background-color: #583930;
 }
 
 button {
@@ -22,6 +112,106 @@ button {
 }
 
 textarea {
-    background-color: #FFF;
+    background-color: #333;
     color: #999999;
+}
+
+
+/* FOR DESKTOP DEVICES: */
+@media only screen and (min-width: 768px) {
+    /* FOR DESKTOP DEVICES: */
+
+    /* -------------------- FIRST PRINCIPLE: Separate Structure and Skin ----------- */
+
+    /* STRUCTURES - define repeating "invisible" patterns (like width, margins, etc) as reusable STRUCTURES
+    (I.e. how things are laid out)
+    Hint: An example of an entire "structure" would be a "btn-small" class, or small button, and all the invisible patterns
+    would be the contents of that class. I.e., everything that would make a "button" look like a button and that
+    alone would belong here, like: height, width, margins, overflow, padding, etc..
+    Class examples: "btn-small", "btn-right" */
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-logo {
+        flex-grow: 1;
+    }
+
+    .nav-userid {
+        flex-grow: 2;
+    }
+
+    .nav-links {
+        flex-grow: 3;
+    }
+
+    /*--------------------------------------------*/
+    /* SKINS - define repeating visual patterns as reusable SKINS
+    (I.e. what the layout looks like)
+    Hint: An example of a skin class will be looked in the "btn" example I provided above. The structure of the
+    button is already accomplished (i.e., we *made* a button); now we just have to apply a skin to the button.
+    Keep in mind that this includes ANYTHING visual, like: colors, gradients, visible borders, shadows, etc.
+    Class examples: "btn-green", "heading-green" */
+
+
+    /*--------------------------------------------*/
+    /* COLOR PALLETE:
+    - White: #FFF
+    - Brown: #583930
+    - Grey: #252525
+    - Orange: #FF9900
+    - Yellow: #FFC400
+    */
+
+    /*ANIMATION*/
+
+    /*BACKGROUND*/
+
+    /*COLOR*/
+
+    /*DECORATION*/
+
+    /*FONTS*/
+
+    .font-orange {
+        color: #FF9900;
+    }
+
+    .font-white {
+        color: #FFF;
+    }
+
+    .font-yellow {
+        color: #FFC400;
+    }
+
+    /*IMAGES*/
+
+    /*SHADOW*/
+
+    /*--------------------------------------------*/
+    /*ELEMENT SELECTORS: (Exceptions to the rule)*/
+    /* Background with a red/purple gradient */
+    body {
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+        font-family: "Ubuntu", "Product Sans", "Liberation Sans", Arial, sans-serif;
+        background-color: #583930;
+    }
+
+    button {
+        background-color:#422E26;
+        border-color: #B38900;
+        color: #FFC400;
+    }
+
+    textarea {
+        background-color: #333;
+        color: #999999;
+    }
+
+    
 }

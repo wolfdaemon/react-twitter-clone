@@ -17,14 +17,14 @@ class MyRoutes extends Component {
     render() {
         return (
             <Router>
-                <div>
-                    <Navbar />
-                    <Routes>
-                        <Route path="/" element={<Login />} />
-                        <Route path="/feed" element={<Feed />} />
-                        <Route path="/meta" element={<Meta />} />
-                    </Routes>
-                </div>
+                {/* Document Section: Navigation Bar
+		        (Links to site's main sections; i.e. the main menu) */}
+                <Navbar />
+                <Routes>
+                    <Route path="/" element={<Login />} />
+                    <Route path="/feed" element={<Feed />} />
+                    <Route path="/meta" element={<Meta />} />
+                </Routes>
             </Router>
         );
     }

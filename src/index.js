@@ -9,8 +9,18 @@ window.id = localStorage.getItem('userId');
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <h1>Quacker</h1>
-    <h2>@{window.id}</h2>
-    <MyRoutes />
+    {/* Contents of the webpage
+    (cite.: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
+    Usually contains five basic sections:
+        1. Header (<header>)
+        2. Navigation Bar (<nav>)
+        3. Main Content (<main>)
+        4. Sidebar (<aside>)
+        5. Footer (<footer>)
+    The Sections are marked by comments explaining their use below. */}
+    
+      <MyRoutes />
+    {/* Document Section: Navigation Bar
+		(Links to site's main sections; i.e. the main menu)*/}
   </React.StrictMode>
 );
