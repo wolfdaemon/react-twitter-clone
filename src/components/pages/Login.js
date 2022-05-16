@@ -1,12 +1,18 @@
 import React from "react";
 import User from "../User";
+import Meta from "./Meta";
 
 class Login extends React.Component {
-  render(){
-    return(
-      <div className="">
-        <h2 className="font-orange">Login:</h2>
-        <User/>
+  render() {
+    return (
+      <div>
+        <div className="nav-login">
+          <h2 className="font-orange font-login">Username:</h2>
+          <User />
+        </div>
+        <div className="nav-login nav-center">
+          <Meta />
+        </div>
       </div>
     );
   }

@@ -30,7 +30,7 @@ class User extends Component {
         });
         localStorage.setItem('userId', this.IdContent.current.value);
         // calls the "refreshPage" method with will refresh the page and display the inputted information on parent components
-        this.refreshPage();
+        // this.refreshPage(); //Disable
     }
 
     handleLogout() {
@@ -52,20 +52,20 @@ class User extends Component {
         let welcomeElement,idElement, buttonArea;
         if (this.state.editMode && this.state.LoggingStatus) {
             //User Log in and enable edit mode
-            idElement = <textarea ref={this.IdContent} className="title-textarea" defaultValue={this.state.id}></textarea>;
-            buttonArea = <div>
+            idElement = <textarea ref={this.IdContent} className="title-textarea nav-center" defaultValue={this.state.id} placeholder="Enter Your New ID"></textarea>;
+            buttonArea = <div className="buttom-even">
                 <button className="btn btn-info" onClick={this.handleSave.bind(this)}>Save</button>
-                <button className="btn btn-info" onClick={this.handleLogout.bind(this)}>Log Out</button></div>;
+                <button className="btn btn-info margin-r5" onClick={this.handleLogout.bind(this)}>Log Out</button></div>;
         } else if (!this.state.editMode &&this.state.LoggingStatus) { 
             //User log in and not enable edit mode
-            welcomeElement = <h2>Hello {this.state.id} !</h2>
-            buttonArea = <div>
-                <button className="btn btn-info" onClick={this.handleEdit.bind(this)}>Edit</button>
-                <button className="btn btn-info" onClick={this.handleLogout.bind(this)}>Log Out</button></div>;
+            welcomeElement = <h2 className="body-textarea">Hello {this.state.id} !</h2>
+            buttonArea = <div className="buttom-even">
+            <button className="btn btn-info" onClick={this.handleEdit.bind(this)}>Edit</button>
+            <button className="btn btn-info margin-r5" onClick={this.handleLogout.bind(this)}>Log Out</button></div>;
         } else {
             //User Logged out or have not log in and have not enable edit mode.
             idElement = <textarea ref={this.IdContent} className="title-textarea" placeholder="Enter Your ID"></textarea>;
-            buttonArea = <div><button className="btn btn-info" onClick={this.handleSave.bind(this)}>Login</button></div>;
+            buttonArea = <div className="button-right"><button className="btn btn-info margin-r5" onClick={this.handleSave.bind(this)}>Login</button></div>;
         }
         return (
             <div className="col-sm-6">

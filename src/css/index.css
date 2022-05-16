@@ -41,13 +41,34 @@ Class examples: "btn-small", "btn-right" */
 }
 
 .nav-logo {
-    display: flex;
-    justify-content: center;
+    width: auto;
+    margin-bottom: 10px;
+    margin-top: 5px;
 }
 
+/* I think show Id on screen is not needed
 .nav-userid {
     display: flex;
     justify-content: left;
+} */
+
+.nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.nav-login {
+    margin-left: 15%;
+    margin-right: 50%;
+    margin-bottom: 15%;
+    width: 70%;
+}
+
+.nav-center {
+    display: flex;
+    justify-content: center;
 }
 
 /*--------------------------------------------*/
@@ -79,7 +100,7 @@ Class examples: "btn-green", "heading-green" */
 /*FONTS*/
 
 .font-orange {
-    color: #FF9900;
+    color: #FF9900; 
 }
 
 .font-white {
@@ -88,6 +109,14 @@ Class examples: "btn-green", "heading-green" */
 
 .font-yellow {
     color: #FFC400;
+}
+
+.font-logo {
+    font-size: 40px;
+}
+
+.font-login {
+    font-size: 30px;
 }
 
 /*IMAGES*/
@@ -116,9 +145,33 @@ textarea {
     color: #999999;
 }
 
+a {
+    color:#FF9900;
+}
 
 /* FOR DESKTOP DEVICES: */
 @media only screen and (min-width: 768px) {
     /* FOR DESKTOP DEVICES: */
-    
+    .nav-login {
+        margin-left: 30%;
+        margin-right: 30%;
+        margin-bottom: 15%;
+        width: 25%;
+    }
+
+    .nav-center {
+        display: flex;
+        justify-content: left;
+    }
+
+    .nav-logo {
+        width: auto;
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+
+    .nav-center {
+        display: flex;
+        justify-content: center;
+    }
 }

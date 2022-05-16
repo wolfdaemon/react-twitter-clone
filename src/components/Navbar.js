@@ -7,13 +7,15 @@ class Navbar extends Component {
 
   render() {
     return (
-      <nav className="nav">
-        <div className="nav-logo">
-          <h1 className="font-orange">Quacker</h1>
+      <nav>
+        <div className="nav-logo nav-center">
+          <h1 className="font-orange font-logo">Quacker</h1>
         </div>
-        <div className="nav-userid">
+        {/* I think show ID here will make the website look uglier
+            Consider to change it.
+         <div className="nav-userid">
           <h2 className="font-white">@{window.id}</h2>
-        </div>
+        </div> */}
         <div className="nav-links">
           <Link to="/">Home</Link> 
           <Link to="/feed"> Feed</Link>
